@@ -1,631 +1,676 @@
-<!--
-
-╭━━━┳╮╱╭┳━━━┳━━━┳━━━━┳╮╱╭┳━━━┳━╮╭━┳━━━┳━━━╮
-┃╭━╮┃┃╱┃┃╭━━┫╭━╮┃╭╮╭╮┃┃╱┃┃╭━━┫┃╰╯┃┃╭━━┫╭━╮┃
-┃╰━━┫╰━╯┃╰━━┫┃╱┃┣╯┃┃╰┫╰━╯┃╰━━┫╭╮╭╮┃╰━━┫╰━━╮
-╰━━╮┃╭━╮┃╭━━┫╰━╯┃╱┃┃╱┃╭━╮┃╭━━┫┃┃┃┃┃╭━━┻━━╮┃
-┃╰━╯┃┃╱┃┃╰━━┫╭━╮┃╱┃┃╱┃┃╱┃┃╰━━┫┃┃┃┃┃╰━━┫╰━╯┃
-╰━━━┻╯╱╰┻━━━┻╯╱╰╯╱╰╯╱╰╯╱╰┻━━━┻╯╰╯╰┻━━━┻━━━╯
-
-Page ⎾LUKEWARM⏌ by sheathemes @ tumblr
-
-- TERMS -
-
-I. Do NOT remove my credit from the index page. Keep it exactly where it is
-II. Do NOT take any part of my code to use for your personal designs
-III. Do NOT claim any part of my code as your own
-IV. NO redistrubuting of any of my code
-V. Editing is allowed. As long as it's NOT being claimed as your own
- 
-CREDITS
- 
-> Tippy.js: https://atomiks.github.io/tippyjs/
-
-> Smoothscroll script: https://cdnjs.com/libraries/smoothscroll
-
-> Icons: https://phosphoricons.com/
- 
-!-->
- 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
- 
+<!DOCTYPE html>
 <head>
+<title>about</title>
 
-<!------------Smooth Scroll Script------------>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
-<!------------Smooth Scroll Script------------>
- 
-<!--------------Custom Fonts-------------->
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---
+    
+    moongate about page by SAGE / https://demontimes.tumblr.com
+    
+    - the places where you can edit are marked / search "edit here"
+    - feel free to send me an ask if you have any questions!
+    
+    CREDITS:
+    - phosphor icons / https://phosphoricons.com/
+    - tippy.js tooltips / https://atomiks.github.io/tippyjs/
+    - google fonts / https://fonts.google.com/
+    
+--->
+
+<!----- GOOGLE FONTS ---->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,500&family=Mukta:wght@400;500;700&display=swap" rel="stylesheet">
-<!--------------Custom Fonts-------------->
- 
-<!----------------Homelinks Icons---------------->
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+<!---- ICONS ---->
 <script src="https://unpkg.com/phosphor-icons"></script>
-<!----------------Homelinks Icons---------------->
- 
-    <title>{Title}</title>
-    <link rel="shortcut icon" href="{Favicon}">
-    <link rel="altertnate" type="application/rss+xml" href="{RSS}">
-    <meta http-equiv="x-dns-prefetch-control" content="off"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!---- TOOLTIPS ---->
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+
+<!----- CSS ----->
 
 <style type="text/css">
 
-/*------
- 
-CUSTOMIZATION OPTIONS HERE. HERE YOU CAN GE EVERYTHING FROM THE COLORS TO THE OVERALL FONT SIZE TO YOUR LIKING!
- 
------- */
+/*--- EDIT HERE ---*/
 
+/*--- COLORS ---*/
 :root {
-    /*------ Change the font size here------ */
-    --main-font-size: 14px;
-    
-    /*------ Change the colors here------ */
-    --accent: #fcca85;
-    --accented-text: #ffffff;
-    --main-background: #fbfbfb;
-    --text: #888888;
-    --bold: #280f0d;
-    --italic: #000000;
-    --main-links: #00000;
-    --link-hover: #B08E72;
-    --scrollbar: #fcca85;
-    --text-selection-background: #fcca85;
-    --text-selection: #000000;
-    --tooltip: #000000;
-    --tooltip-background: #fcca85;
-    --about-background: #ffffff;
-    --post-borders: #f6f6f6;
-    
-    /*----------
-    Percentage bars here. You edit here. Make sure to use the percentage. It's required in order for it to work
-    ----------*/
-    --skill-percentage-one: 25%;
-    --skill-percentage-two: 65%;
-    --skill-percentage-three: 40%;
+  --background: #f5f5f5;
+  --content-background: #fff;
+  --text: #7476a2;
+  --link: #8175ff;
+  --accent: #6251d1;
+  --title: #9791ff;
+  --borders: #d8d8d8;
+  --shadow: #ddd;
+  --gradient-one: #8e94ec;
+  --gradient-two: #bfc3ff;
+  --gradient-text: #fff;
+  
+  /*--- OTHER ---*/
+  --body-font: 'Karla'; /*-- lmk if you want help changing the font! --*/
+  --font-size: 15px;
+  --border-radius: 5px;
+  --text-shadow: 0 0 10px; /*-- change to 0 if you don't want a glow --*/
 }
- 
-/*----------FADE-IN ANIMATION----------*/
- 
-@keyframes fadein {
-    from {opacity:0;}
-    to {opacity:1;}
-}
- 
-@-moz-keyframes fadein { /* Firefox */
-    from {opacity:0;}
-    to {opacity:1;}
-}
- 
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {opacity:0;}
-    to {opacity:1;}
-}
- 
-@-o-keyframes fadein { /* Opera */
-    from {opacity:0;}
-    to {opacity: 1;}
-}
- 
-/*----------TUMBLR CONTROLS----------*/
- 
-iframe#tumblr_controls, .iframe-controls--desktop {
-    right: 10px !important;
-    top: 25px !important;
-    position: fixed !important;
-    z-index: 99999999999999999999 !important;
-    -webkit-filter: invert(100%);
-    -moz-filter: invert(100%);
-    -o-filter: invert(100%);
-    -webkit-transition: opacity 0.4s linear;opacity: 0.4;
-    -webkit-transition: all 0.8s ease-out;
-    -moz-transition: all 0.8s ease-out;
-    transition: all 0.8s ease-out;
-    display: none;
-}
- 
-/*----------SCROLLBAR----------*/
- 
-::-webkit-scrollbar {
-    width: 12px;
-    height: 6px;
-}
-::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar);
-    border-radius: 20px;
-    border: 2px solid var(--about-background);
-}
- 
-::-webkit-scrollbar-track {
-    background: var(--post-borders);
-    border: 8px solid var(--post-borders);
-    border-radius: 20px;
-}
- 
-::-webkit-scrollbar-corner {
-    background: transparent;
-}
- 
-/*----------TOOLTIPS----------*/
- 
+
+/*----- TOOLTIPS -----*/
+
 .tippy-tooltip.custom-theme {
-    background-color: var(--tooltip-background);
-    color: var(--tooltip); 
-    text-align:center;
+    background-color: var(--title);
+    color: var(--content-background);
     font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 5px 0;
+    font-size: 0.9em;
+    border-radius:var(--border-radius);
+    margin: 5px 0;
+}
+
+/*---- SCROLLBAR ----- */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--background);
 }
  
-.tippy-tooltip.custom-theme .tippy-svg-arrow {
-  fill: var(--tooltip-background);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two));
+    border-radius: 5px;
 }
- 
-/*----------TEXT SELECTION----------*/
-::selection {
-    background: var(--text-selection-background);
-    color: var(--text-selection);
-}
- 
-::-moz-selection {
-    background: var(--text-selection-background);
-    color: var(--text-selection);
-}
- 
-::-webkit-selection {
-    background: var(--text-selection-background);
-    color: var(--text-selection);
-}
- 
-/*----------THEME BASICS----------*/
- 
+
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--main-font-color);
-    font-family: 'Mukta', sans-serif;
-    font-weight: 400;
-    line-height: 180%;
-    font-size: var(--main-font-size);
-    background: var(--main-background) url("") center; /*Add a background image between the quotations*/
-    background-attachment: fixed;
-    background-repeat: repeat;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    animation: fadein 2.5s;
-    -moz-animation: fadein 2.5s; 
-    -webkit-animation: fadein 2.5s;
-    -o-animation: fadein  2.5s;
-}
- 
-b,strong {
-    color:var(--bold);
-    font-weight: 700;
-}
- 
-i,em {
-    color:var(--italic);
-}
- 
-small,sub,sup {
-    font-size: calc(var(--main-font-size) - 0.5px);
-}
- 
-h1,h2,h3 {
-    font-weight: 700;
-    font-size: 1.3em;
-    color: var(--bold);
-}
- 
-h4,h5,h6 {
-    font-weight: 700;
-    font-size: 1.2em;
-    color: var(--bold);
+    font-family: var(--body-font), sans-serif;
+    font-size: var(--font-size);
+    color: var(--text);
+    background: var(--background);
+    line-height: 160%;
+    letter-spacing: 0.2px;
+    word-wrap: break-word;
 }
 
 a {
-    color: var(--main-links);
+    color: var(--link);
     text-decoration:none;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
- 
+
 a:hover {
-    color: var(--link-hover);
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    color: var(--accent);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
-/*----------MAIN CONTAINER----------*/
+p {margin-top: 1.2em;}
 
-.about-container {
-    width: 980px;
-    height: 670px;
-    display: flex;
-    padding: 40px;
-    background-color: var(--about-background);
+h2 {font-size:1.1em;letter-spacing:1px;margin:10px 0 -10px 0;color:var(--title);}
+
+small {font-size: 0.9em;}
+big {font-size: 1.1em;}
+b, bold, strong {color: var(--title);}
+
+blockquote {
+    padding: 0 0 0 1em;
+    border-left: 1px solid var(--borders);
+    margin: 1em 0 1em 1em;
 }
 
-/*----------ABOUT THE BLOGGER SECTION----------*/
+li {list-style-type:circle;}
+li::marker {color:var(--accent);}
 
-.about-section {
-    width: 630px;
-    padding: 10px 40px;
-    box-sizing: border-box;
-    overflow: auto;
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {
+    z-index: 999999999!important;
+    opacity:0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-.about-title {
-    font-size: 1.6em;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
+    opacity:1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-/*----------SKILLS / STATS----------*/
+/*----- TOP NAVIGATION -----*/
 
-.skills-content {
-    margin-top: 40px;
-}
-
-.skills-content p {
-    color: var(--main-links);
-    font-weight: 700;
-}
- 
-.skill-cont, .image-content {
-    margin-top: 30px;
-} 
- 
-.skill {
-    background-color: var(--post-borders);
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
- 
-.skill-set {
-    background-color: var(--accent);
-    width: 100%;
-    height: 10px;
-    border-radius: 10px;
-    transition: 0.6s;
-}
-
-/*----------IMAGE GALLERY----------*/
-
-.image-section img {
-    width: 100px;
-    height: 100px;
-}
-
-.image-section {
-    margin-top: 40px;
-    display: grid;
-    justify-content: center;    
-    gap: 10px;
-    grid-template-columns: repeat(4, 100px);
-}
-
-.image-one {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.image-two {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.image-five {
-    grid-column: 3 / 5;
-    grid-row: 1 / 3;
-}
-
-.image-five img {
-    width: 210px;
-    height: 210px;
-}
-
-.image-six {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-}
-
-.image-six img {
-    width: 210px;
-    height: 210px;
-}
-
-/*----------SIDEBAR----------*/
-
-#about-sidebar {
-    width: 350px;
-}
-
-.image-cont {
-    width: 350px;
-    height: 390px;
-}
-
-.image-cont img {
-    width: 100%;
-    height: auto;
-}
-
-.blogger-info {
-    margin: 0;
-    padding: 20px 0 0;
-    list-style-type: none;
-    box-sizing: border-box;
-}
-
-.blogger-info b {
-    border: 1px solid var(--post-borders);
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
-.blogger-info li {
-    margin: 20px 0;
-}
-
-/*----------NAVIGATION----------*/
-
-.nav-bar {
-    padding-left: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.nav-portrait img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.morelinks a {
-    display: block;
-    margin: 50px 0;
-}
-
-.morelinks a:last-child {
-    margin-bottom: 0;
-} 
-
-.morelinks i {
-    font-size: 25px;
-}
-
-/*----------THEME CREDIT/DO NOT REMOVE!!!---------*/
- 
-#bottom {
-    bottom: 40px;
+header {
     position: fixed;
-    right: 40px;
-    z-index: 99;
-    display: flex;
-}
- 
-.ph-copyright {
-    padding: 3px;
-    font-size: 22px;
-    width: 22px;
-    height: 22px;
-    background-color: var(--accent);
-    color: var(--accented-text);
-    border-radius: 5px;
-    margin: 0 2px;
+    text-align:center;
+    background:linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+    padding-top:1em;
+    padding-bottom:.5em;
+    width: 100%;
+    height:40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999999;
 }
 
-</style>
+header nav {
+    display:flex; justify-content:center;
+}
 
- 
+header nav a {margin:0 1em 0 1em;}
+
+header nav i {
+    color:var(--gradient-text);
+    padding:5px;
+    border-radius:100%;
+    font-size:1.5em;
+    text-shadow:var(--text-shadow);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+header nav i:hover {
+    color:var(--accent);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/*----- BASICS -----*/
+
+.subtitle {
+    text-align:center;
+    margin-bottom:1em;
+    font-size:1.3em;
+    color:var(--title);
+    font-weight:bold;
+}
+
+/*----- CONTENT -----*/
+
+#content {
+    position:relative;
+    width:800px;
+    margin:auto;
+}
+
+.about-wrap {margin:1em;}
+.about-wrap:first-of-type {margin-top:100px;}
+.about-wrap:last-of-type {margin-bottom:100px;}
+
+.about {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.about #text {
+    width:60%;
+    height:150px;
+    padding:1em;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    background:linear-gradient(to top right, var(--gradient-one), var(--gradient-two));
+    border-radius:var(--border-radius);
+    box-shadow:1px 1px 5px 1px var(--shadow);
+}
+
+.about #text li {
+    margin:.5em;
+    list-style-type:none;
+    width:36%;
+}
+
+.about #text i {
+    font-size:1.3em;
+    padding:8px;
+    text-shadow:var(--text-shadow);
+    border-radius:var(--border-radius);
+    background:rgba(255,255,255,.1);
+    color:var(--accent);
+}
+
+.about #text span {
+    display:inline-block;
+    vertical-align:top;
+    margin-top:5px;
+    margin-left:.5em;
+    color:var(--gradient-text);
+}
+
+.about #abt-img {
+    width:40%;
+    height:150px;
+    margin-right:1em;
+    padding:1em;
+    background:var(--content-background);
+    border-radius:var(--border-radius);
+    display:flex;
+	flex-wrap:nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    box-shadow:1px 1px 5px 1px var(--shadow);
+}
+
+#abt-img img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:100%;
+    padding:4px;
+    background:linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+}
+
+#abt-img .txt {
+    margin-left:1em;
+}
+
+#abt-img li {
+    color:var(--accent);
+    list-style-type:none;
+    font-size:.9em;
+}
+
+#abt-img li b {
+    font-weight:bold;
+    color:var(--title);
+    font-size:1.3em;
+}
+
+.bio {
+    padding:1.5em;
+    letter-spacing:.1em;
+    color:var(--text);
+    border-radius:var(--border-radius);
+    background:var(--content-background);
+    box-shadow:1px 1px 5px 1px var(--shadow);
+}
+
+.bio p:last-of-type {margin-bottom:0;}
+
+.bio a {
+  display: inline-block;
+  position: relative;
+  border-bottom:2px solid var(--borders);
+}
+
+.bio a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.bio a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.favs {
+    display:flex;
+    justify-content:space-between;
+    padding:1em;
+    color:var(--text);
+    border-radius:var(--border-radius);
+    background:var(--content-background);
+    box-shadow:1px 1px 5px 1px var(--shadow);
+}
+
+.favs .subtitle {
+    padding:8px;
+    color:var(--gradient-text);
+    border-radius:var(--border-radius);
+    background:linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+    text-align:center;
+}
+
+.favs .subtitle i {
+    font-size:1.1em;
+    padding:8px;
+    text-shadow:var(--text-shadow);
+    color:var(--accent);
+}
+
+.favs .subtitle span {
+    font-size:.9em;
+    display:inline-block;
+    vertical-align:top;
+    margin-top:7px;
+    font-weight:normal;
+}
+
+.favs #ftext {padding:.5em;}
+.favs #ftext li {display:inline-block;}
+.favs #ftext li:not(:last-child):after {
+    content:'•';
+    color:var(--accent);
+    padding:0 .5em 0 .5em;
+}
+
+.likes, .dislikes {
+    width:50%;
+    padding:10px;
+}
+
+.elsewhere {
+    padding:1em;
+    border-radius:var(--border-radius);
+    background:var(--content-background);
+    box-shadow:1px 1px 5px 1px var(--shadow);
+}
+
+.blog-wrap {
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+
+.blog {
+    margin:.5em;
+}
+
+.blog img {
+    width:50px;
+    height:50px;
+    border-radius:100%;
+    padding:2px;
+    background:linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+}
+
+#blog-desc {
+    display:inline-block;
+    vertical-align:top;
+    margin-left:.5em;
+    margin-top:.3em;
+}
+
+.blog a:hover #blog-desc b {
+    color:var(--accent);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+    
+.blog a:hover #blog-sub {
+    color:var(--title);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#blog-desc b {
+    font-size:1.05em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#blog-sub {
+    font-size:.9em;
+    margin-left:.2em;
+    color:var(--accent);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.social-wrap {
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    margin-top:1em;
+}
+
+.social {
+    margin:.5em;
+}
+
+.social i {
+    font-size:1.4em;
+    color:var(--gradient-text);
+    text-shadow:var(--text-shadow);
+    padding:8px;
+    border-radius:var(--border-radius);
+    background:linear-gradient(to right, var(--gradient-one), var(--gradient-two));
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.social i:hover {color:var(--accent);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;}
+
+/*--- RESPONSIVENESS ----*/
+    
+@media only screen and (max-width: 1100px) {
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {display:none;}
+}
+
+@media only screen and (max-width: 850px) {
+    
+#content {margin:100px auto; width:90%;}
+
+.about {justify-content:space-evenly; flex-wrap:wrap;}
+.about #abt-img {width:100%; margin-bottom:1em; height:auto; margin-right:0;justify-content:center;}
+.about #text {width:100%; height:auto;}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {display:none;}
+
+}
+
+@media only screen and (max-width:450px) {
+
+#content {width:100%;}
+
+.about #text li {width:100%;}
+    
+.favs .subtitle span {display:none;}
+.favs #ftext li {display:block;}
+.favs #ftext li:not(:last-child):after {display:none;}
+.favs #ftext li:before {
+    content:'•';
+    color:var(--accent);
+    padding:0 .5em 0 .5em;
+}
+
+.blog-wrap {justify-content:flex-start;}
+
+}
+    
+</style>    
 </head>
-
 <body>
 
-<section class="about-container">
-    <aside id="about-sidebar">
-        <div class="image-cont">
-            <!------SIDEBAR IMAGE ------>
-            <img src="https://static.tumblr.com/uh2chis/yWSr7kni3/jessica-felicio-qs9zx5uns14-unsplash.png"> 
-            <!------SIDEBAR IMAGE ------>
-        </div>
-        <ul class="blogger-info">
-            <li><b>Name</b> name here</li> <!------NAME HERE------>
-            <li><b>Pronouns</b> pronouns here</li> <!------PRONOUNS HERE------>
-            <li><b>Age</b> age here</li> <!------AGE HERE------>
-            <li><b>location</b> location here</li> <!------LOCATION HERE------>
-            <li><b>Occupation</b> occupation here</li> <!------OCCUPATION HERE------>
-        </ul>
-    </aside>
-    <article class="about-section">
-            <!----------------ABOUT ME SECTION START---------------->
-        <section class="about-content"> 
-            <div class="about-title">About the blogger</div> <!------ABOUT TITLEE------>
-            <div class="about-bio">
-            
-            <!------IF YOU WANT TO ADD ANOTHER PARAGRAPH, JUST COPY THIS CODE:
-            
-            <p>this is where you write your paragraph</p>
-            
-            and paste it below.
-            
-            ------>
-<p>
-<!------EDIT ABOUT ME BELOW------>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed arcu sapien. Vestibulum ornare, lectus et pulvinar semper, odio nisl pharetra dui, sit amet feugiat leo nibh et libero. Nulla id nibh tincidunt, commodo urna efficitur, laoreet mauris. Aliquam mollis neque a purus rhoncus facilisis. Quisque sed lorem finibus, eleifend nulla at, commodo nisl. Integer vitae eros purus. Nulla facilisi. Praesent nibh est, lobortis et lacinia quis, sollicitudin id mi. Praesent mattis nisl id mauris dignissim, in eleifend purus interdum. Duis arcu metus, dictum sed hendrerit vel, ullamcorper eget nisl. Fusce tempus elit a porta congue. Duis cursus sed justo quis commodo. Morbi nunc nisl, sagittis in semper viverra, hendrerit ut ex.
-<!------EDIT ABOUT ME ABOVE------>
-<p>
+<!---- EDIT HERE ---->
 
-<p>
-<!------EDIT ABOUT ME BELOW------>
-Nullam commodo feugiat aliquet. Integer tristique et velit quis venenatis. In placerat lacus sed urna porttitor, sit amet pharetra libero lobortis. Phasellus sit amet mauris eleifend, auctor velit ut, aliquam ante. Vivamus pharetra risus id ipsum sagittis, ac efficitur nunc commodo. Suspendisse dignissim erat non augue efficitur, vitae fermentum massa pretium. Quisque cursus dapibus tellus.
-<!------EDIT ABOUT ME ABOVE------>
-</p>
-            </div>
-        </section> 
-        <!----------------ABOUT ME SECTION END---------------->
-        
-    <!----------------SKILLS START---------------->
-    <section class="skills-content">
-        <div class="about-title">Skills</div> <!------Edit skill 1 title------>
-            <section class="skill-cont">
-                <section class="skill">
-                <section class="skill-set" style="width:var(--skill-percentage-one);"></section>
-                </section>
-            </section>
-            <p>Skill one</p>
-            
-            <section class="skill-cont">
-                <section class="skill">
-                <section class="skill-set" style="width:var(--skill-percentage-two);"></section>
-                </section>
-            </section>
-            <p>Skill two</p> <!------Edit skill 2 title------>
-            
-            <section class="skill-cont">
-                <section class="skill">
-                <section class="skill-set" style="width:var(--skill-percentage-three);"></section>
-                </section>
-            </section>
-            <p>Skill three</p> <!------Edit skill 3 title------>
-    </section>
-    <!----------------SKILLS END---------------->
-    
-    <!----------------IMAGE GALLERY START---------------->    
-    <section class="image-content">
-        <div class="about-title">Image Gallery</div>
-        <div class="image-section">
-            <div class="image-one">
-            <!----------EDIT FIRST IMAGE BETWEEN QUOTATION---------->  
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT FIRST IMAGE BETWEEN QUOTATION---------->      
-            </div>
-            
-            <div class="image-two">
-            <!----------EDIT SECOND IMAGE BETWEEN QUOTATION---------->  
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-             <!----------EDIT SECOND IMAGE BETWEEN QUOTATION---------->     
-            </div>
-            <div class="image-three">
-            <!----------EDIT THIRD IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT THIRD IMAGE BETWEEN QUOTATION---------->    
-            </div>
-            
-            <div class="image-four">
-            <!----------EDIT FOURTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT FOURTH IMAGE BETWEEN QUOTATION---------->  
-            </div>
-            
-            <div class="image-five">
-            <!----------EDIT FIFTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT FIFTH IMAGE BETWEEN QUOTATION---------->    
-            </div>
-            
-            <div class="image-six">
-            <!----------EDIT SIXTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT SIXTH IMAGE BETWEEN QUOTATION---------->    
-            </div>
-            <div class="image-seven">
-            <!----------EDIT SEVENTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT SEVENTH IMAGE BETWEEN QUOTATION---------->    
-            </div>
-            
-            <div class="image-eight">
-            <!----------EDIT EIGTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT EIGTH IMAGE BETWEEN QUOTATION---------->   
-            </div>
-            
-            <div class="image-nine">
-            <!----------EDIT NINTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT NINTH IMAGE BETWEEN QUOTATION---------->   
-            </div>
-            
-            <div class="image-ten">
-            <!----------EDIT TENTH IMAGE BETWEEN QUOTATION---------->
-            <img src="https://static.tumblr.com/uh2chis/88yr7kxlm/jessica-felicio-qs9zx5uns14-unsplash__1_.png">
-            <!----------EDIT TENTH IMAGE BETWEEN QUOTATION---------->    
-            </div>
-            
-        </div>
-    </section>
-    <!----------------IMAGE GALLERY END---------------->     
-    </article>
-    
-    
-    <nav class="nav-bar">
-    <div class="nav-portrait"><img src="{PortraitURL-96}"></div>
-        <div class="morelinks">
-            <a href="/" title="home"><i class="ph-house"></i></a> 
-            <a href="/ask" title="inbox"><i class="ph-question"></i></a> 
-            <a href="/archive" title="archive"><i class="ph-calendar"></i></a> 
-            <a href="/submit" title="submit"><i class="ph-envelope-simple"></i></a>
-            <!----------Links you can edit---------->
-            <a href="/" title="link 1 title here"><i class="ph-airplane-tilt"></i></a>
-            <a href="/" title="link 2 title here"><i class="ph-butterfly"></i></a>
-            <a href="/" title="link 3 title here"><i class="ph-cloud"></i></a>
-            <!----------Links you can edit---------->
-        </div>
+<!---- HEADER ---->
+<header>
+    <nav>
+        <a title="home" href="/"><i class="ph-house-fill"></i></a>
+        <a title="contact" href="/ask"><i class="ph-chats-circle-fill"></i></a>
+        <a title="link 1 title" href="/"><i class="ph-sparkle-fill"></i></a>
+        <a title="link 2 title" href="/"><i class="ph-planet-fill"></i></a>
+        <a title="link 3 title" href="/"><i class="ph-moon-stars-fill"></i></a>
+<!---- CREDIT: DO NOT TOUCH ---->
+        <a title="page by sage" href="https://demontimes.tumblr.com/"><i class="ph-ghost-fill"></i></a>
     </nav>
-</section>
+</header>
 
-<footer id="bottom">
-<!-------------------DO NOT REMOVE THEME CREDIT!!!------------------->
- <a href="https://sheathemes.tumblr.com" target="_blank" title="sheathemes"><i class="ph-copyright"></i></a>  
-<!-------------------DO NOT REMOVE THEME CREDIT!!!------------------->
-</footer>
+<!--- main content --->
+<div id="content">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
- 
-<!-----------Tooltips Script----------->
-<script src="https://unpkg.com/popper.js@1"></script> 
-<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
-<!-----------Tooltips Script-----------> 
+<div class="about-wrap">
+    <div class="about">
+<!--- by default this section will show your blog's avatar, title, and url --->
+        <div id="abt-img">
+<img src="{portraiturl-128}">
+            <div class="txt">
+            <li><b>{title}</b></li>
+            <li>@{name}</li>
+            </div>
+        </div>
+        
+        <div id="text">
+<!--- feel free to change the icons! when you change the text make sure the <span> stays in place --->
+            <li><i class="ph-user"></i><span>name</span></li>
+            <li><i class="ph-heart"></i><span>sexuality</span></li>
+            <li><i class="ph-leaf"></i><span>pronouns</span></li>
+            <li><i class="ph-sun"></i><span>zodiac</span></li>
+            <li><i class="ph-cake"></i><span>age</span></li>
+            <li><i class="ph-map-pin"></i><span>location</span></li>
+        </div>
+    </div>
+</div>
+
+<div class="about-wrap">
+<!--- put your bio/description below --->
+    <div class="bio"><div class="subtitle">about me</div>
+        description goes here! <b>bold text</b>. <a href="/">link</a>. <b><a href="/">bold link</a></b>.
+        <p>paragraph break</p>
+        <blockquote>blockquote</blockquote>
+        <li>here</li>
+        <li>is</li>
+        <li>a list</li>
+    </div>
+</div>
+
+<div class="about-wrap">
+    <div class="favs">
+<!--- likes and dislikes go below, format: <li>like text here</li>  --->
+        <div class="likes"><div class="subtitle"><i class="ph-thumbs-up"></i><span>likes</span></div>
+            <div id="ftext">
+            <li>like</li> <li>like</li> <li>like</li> <li>like</li> <li>like</li></div>
+        </div>
+        <div class="dislikes"><div class="subtitle"><i class="ph-thumbs-down"></i><span>dislikes</span></div>
+            <div id="ftext">
+                <li>dislike</li> <li>dislike</li> <li>dislike</li> <li>dislike</li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-wrap">
+    <div class="elsewhere"><div class="subtitle">elsewhere</div>
+<!--- other blogs and social links go below 
+
+BLOG FORMAT:
+*change the content with brackets*
+
+<div class="blog"><img src="https://api.tumblr.com/v2/blog/{blogurl}.tumblr.com/avatar">
+            <a href="https://{blogurl}.tumblr.com">
+            <div id="blog-desc"><b>@{blogurl}</b>
+            <div id="blog-sub">{blog description}</div></div>
+            </a>
+        </div>
+--->
+    <div class="blog-wrap">
+    
+        <div class="blog"><img src="https://api.tumblr.com/v2/blog/demontimes.tumblr.com/avatar">
+            <a href="https://blogurl.tumblr.com">
+            <div id="blog-desc"><b>@blogname</b>
+            <div id="blog-sub">blog description</div></div>
+            </a>
+        </div>
+        
+        <div class="blog"><img src="https://api.tumblr.com/v2/blog/demontimes.tumblr.com/avatar">
+            <a href="https://blogurl.tumblr.com">
+            <div id="blog-desc"><b>@blogname</b>
+            <div id="blog-sub">blog description</div></div>
+            </a>
+        </div>
+        
+        <div class="blog"><img src="https://api.tumblr.com/v2/blog/demontimes.tumblr.com/avatar">
+            <a href="https://blogurl.tumblr.com">
+            <div id="blog-desc"><b>@blogname</b>
+            <div id="blog-sub">blog description</div></div>
+            </a>
+        </div>
+
+    </div>
+    
+    <div class="social-wrap">
+    
+        <div class="social"><a title="ko-fi" href="https://ko-fi.com/"><i class="ph-coffee-fill"></i></a></div>
+        
+        <div class="social"><a title="twitter" href="https://twitter.com/"><i class="ph-twitter-logo-fill"></i></a></div>
+        
+        <div class="social"><a title="discord" href="/"><i class="ph-discord-logo-fill"></i></a></div>
+        
+        <div class="social"><a title="instagram" href="https://instagram.com/"><i class="ph-instagram-logo-fill"></i></a></div>
+        
+        <div class="social"><a title="snapchat" href="/"><i class="ph-snapchat-logo-fill"></i></a></div>
+        
+    </div>
+    
+    </div>
+</div>
+
+    
+</div>
+
 
 <script>
-    $(document).ready(function(){
-        tippy('a[title]', { 
-            theme: 'custom', 
-            arrow: tippy.roundArrow, 
-            zIndex: 9999999999, 
-            placement: 'auto',
-            maxWidth: 300, 
-            content(reference) { 
-                const title = reference.getAttribute('title'); 
-                reference.removeAttribute('title'); return title; }, 
-            
-        });
-    });
+
+// tooltips
+
+tippy('[title]', {
+    theme: 'custom',
+    arrow: false,
+    followCursor: true,
+    delay: 100,
+    placement: 'top',
+    zIndex: 9999999999,
+    maxWidth: 400,
+ 
+    content(reference) {
+      const title = reference.getAttribute('title');
+      reference.removeAttribute('title');
+      return title;
+    },
+ });
+ 
 </script>
+
+    
 </body>
-</html> <!---------------------------END--------------------------->
+</html>
